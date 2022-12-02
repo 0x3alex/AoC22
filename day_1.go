@@ -9,7 +9,7 @@ import (
 )
 
 func dayOne() {
-	var current int
+	var current, res int
 	calories := make([]int, 0)
 	f, err := os.Open("input.txt")
 	if err != nil {
@@ -23,19 +23,20 @@ func dayOne() {
 			current = 0
 			continue
 		}
+
 		num, err := strconv.Atoi(scanner.Text())
 		if err != nil {
 			panic(err.Error())
 		}
 		current += num
 	}
+
 	sort.Ints(calories)
 
 	//result part one
 	fmt.Println(calories[len(calories)-1])
 
 	//result part two
-	var res int
 	for i := 1; i <= 3; i++ {
 		res += calories[len(calories)-i]
 	}
