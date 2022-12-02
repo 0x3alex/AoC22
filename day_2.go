@@ -31,7 +31,7 @@ func isDraw(p1, p2 string) bool {
 		(p1 == "C" && p2 == "Z")
 }
 
-func chooseLooseCounter(p1 string) int {
+func loose(p1 string) int {
 	switch p1 {
 	case "A":
 		return points("C") //Scissors
@@ -43,7 +43,7 @@ func chooseLooseCounter(p1 string) int {
 	return 0
 }
 
-func chooseWonCounter(p1 string) int {
+func won(p1 string) int {
 	switch p1 {
 	case "A":
 		return points("B")
@@ -77,11 +77,11 @@ func dayTwo() {
 		//part two
 		switch txt[1] {
 		case "X":
-			score += chooseLooseCounter(txt[0])
+			score += loose(txt[0])
 		case "Y":
 			score += points(txt[0]) + 3
 		case "Z":
-			score += chooseWonCounter(txt[0]) + 6
+			score += won(txt[0]) + 6
 		}
 
 	}
