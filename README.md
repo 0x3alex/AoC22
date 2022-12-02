@@ -1,2 +1,2 @@
 # AoC22
-Solutions for AoC22 in Go
+Solutions for the [Advent Of Code](https://adventofcode.com/) 2022 writen in go
