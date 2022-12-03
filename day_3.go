@@ -76,7 +76,7 @@ func dayThreePartTwo() {
 			for _, c := range l {
 				items[(c)] = nil
 			}
-			for c, _ := range items {
+			for c := range items {
 				counts[c] += 1
 			}
 		}
