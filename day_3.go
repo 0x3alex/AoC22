@@ -5,6 +5,8 @@ import (
 	"fmt"
 	"io"
 	"os"
+	"strings"
+	"unicode"
 )
 
 func getAlphaNum(i int32) int32 {
@@ -19,8 +21,31 @@ func getAlphaNum(i int32) int32 {
 	return int32(top) - r
 }
 
-// only part two, i deleted part one :/
 func dayThree() {
+	var score int32
+	f, err := os.Open("input.txt")
+	if err != nil {
+		panic(err.Error())
+	}
+	scanner := bufio.NewScanner(f)
+	for scanner.Scan() {
+		/* Part one*/
+		f := scanner.Text()[0 : len(scanner.Text())/2]
+		s := scanner.Text()[len(scanner.Text())/2 : len(scanner.Text())]
+		for _, i := range f {
+			if strings.Contains(s, fmt.Sprintf("%c", i)) &&
+				unicode.IsLetter(i) {
+				score += getAlphaNum(i)
+				//fmt.Printf("%c\n", i)
+				break
+			}
+		}
+	}
+	fmt.Println(score)
+
+}
+
+func dayThreePartTwo() {
 	var (
 		i     int
 		total int
