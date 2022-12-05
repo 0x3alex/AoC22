@@ -1,5 +1,8 @@
 # 🎄 AoC22 🎄
 Solutions for the [Advent Of Code](https://adventofcode.com/) 2022 writen in go
+
+I am igonring errors on purpose here, since it's not some piece of code, that is used often.
+
 ---
 Solved Puzzles:
 - [Day One](https://adventofcode.com/2022/day/1)
