@@ -36,8 +36,6 @@ func daySix() {
 			break
 		}
 		buff = str[buffStart : buffStart+packetLen]
-		fmt.Println(buff)
 	}
-	fmt.Println("")
 	fmt.Println(buffStart + len(buff))
 }
