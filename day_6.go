@@ -1,9 +1,12 @@
 package main
 
 import (
+	_ "embed"
 	"fmt"
-	"os"
 )
+
+//go:embed input.txt
+var str string
 
 func daySix() {
 	//packetLen := 4 - for part one
@@ -11,11 +14,6 @@ func daySix() {
 	var buff string
 	var buffStart int
 	m := make(map[int32]int, 0)
-	bytes, err := os.ReadFile("input.txt")
-	if err != nil {
-		panic(err.Error())
-	}
-	str := string(bytes)
 	for {
 		if buffStart+packetLen > len(str) {
 			break
