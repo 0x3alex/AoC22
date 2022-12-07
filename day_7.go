@@ -68,7 +68,6 @@ func daySeven() {
 					currDir = tmp
 					fmt.Println("moving up a dir")
 				}
-				//move
 			}
 			continue
 		}
