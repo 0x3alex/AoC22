@@ -11,3 +11,4 @@ Solved Puzzles:
 - [Day Four](https://adventofcode.com/2022/day/4)
 - [Day Five](https://adventofcode.com/2022/day/5)
 - [Day Six](https://adventofcode.com/2022/day/6)
+- [Day Seven](https://adventofcode.com/2022/day/7)
